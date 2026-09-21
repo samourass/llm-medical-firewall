@@ -1,0 +1,138 @@
+{
+  "model": "logistic_regression",
+  "display_name": "Logistic Regression",
+  "family": "classical_ml",
+  "dataset_version": "v1",
+  "seed": 42,
+  "threshold": 0.5,
+  "best_params": {
+    "C": 1.0
+  },
+  "hyperparameter_search": [
+    {
+      "params": {
+        "C": 0.1
+      },
+      "fit_time_s": 0.07941673799999194,
+      "val_f1": 0.9744338933528123,
+      "val_roc_auc": 0.9876218990590249,
+      "val_fpr": 0.005988023952095809,
+      "val_fnr": 0.047142857142857146
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "fit_time_s": 0.08277544000000603,
+      "val_f1": 0.9767441860465116,
+      "val_roc_auc": 0.990196749358426,
+      "val_fpr": 0.011976047904191617,
+      "val_fnr": 0.04
+    },
+    {
+      "params": {
+        "C": 10.0
+      },
+      "fit_time_s": 0.08166804199998978,
+      "val_f1": 0.9579472558802566,
+      "val_roc_auc": 0.9899700598802397,
+      "val_fpr": 0.09281437125748503,
+      "val_fnr": 0.04
+    }
+  ],
+  "train_time_s_best_config": 0.08277544000000603,
+  "search_time_s_total": 0.3130478600000117,
+  "split_sizes": {
+    "train": 4481,
+    "validation": 1034,
+    "test": 1051
+  },
+  "validation_metrics": {
+    "n_samples": 1034,
+    "accuracy": 0.9690522243713733,
+    "precision": 0.9940828402366864,
+    "recall": 0.96,
+    "f1": 0.9767441860465116,
+    "roc_auc": 0.990196749358426,
+    "pr_auc": 0.9957856693076284,
+    "tp": 672,
+    "tn": 330,
+    "fp": 4,
+    "fn": 28,
+    "fpr": 0.011976047904191617,
+    "fnr": 0.04
+  },
+  "test_metrics": {
+    "n_samples": 1051,
+    "accuracy": 0.9695528068506185,
+    "precision": 1.0,
+    "recall": 0.9536231884057971,
+    "f1": 0.9762611275964391,
+    "roc_auc": 0.9987394114577061,
+    "pr_auc": 0.9993469010887889,
+    "tp": 658,
+    "tn": 361,
+    "fp": 0,
+    "fn": 32,
+    "fpr": 0.0,
+    "fnr": 0.0463768115942029
+  },
+  "test_breakdown": {
+    "attack_detection_rate": {
+      "jailbreak": {
+        "n": 140,
+        "rate": 1.0
+      },
+      "pii_exfiltration": {
+        "n": 140,
+        "rate": 1.0
+      },
+      "prompt_injection": {
+        "n": 140,
+        "rate": 1.0
+      },
+      "rag_prompt_injection": {
+        "n": 140,
+        "rate": 1.0
+      },
+      "secret_exfiltration": {
+        "n": 130,
+        "rate": 0.7538461538461538
+      }
+    },
+    "benign_false_positive_rate": {
+      "benign_doc": {
+        "n": 22,
+        "rate": 0.0
+      },
+      "benign_hard": {
+        "n": 120,
+        "rate": 0.0
+      },
+      "benign_user": {
+        "n": 219,
+        "rate": 0.0
+      }
+    }
+  },
+  "latency": {
+    "latency_single_ms_mean": 0.2907102450008381,
+    "latency_single_ms_median": 0.29156650002448714,
+    "latency_single_ms_p95": 0.3337961000099199,
+    "latency_batch_ms_per_sample": 0.01527248525214135,
+    "latency_n_single": 200
+  },
+  "resources": {
+    "model_size_mb": 0.12356948852539062,
+    "process_rss_mb_after_inference": 202.37109375
+  },
+  "environment": {
+    "python": "3.12.3",
+    "sklearn": "1.8.0",
+    "xgboost": "3.4.1",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+    "cpu_count": 1
+  }
+}

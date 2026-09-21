@@ -1,0 +1,11 @@
+# Étapes 1 à 5 : dataset + ML classique (Logistic Regression, Random Forest, XGBoost)
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+xgboost>=2.0
+matplotlib>=3.8
+seaborn>=0.13
+joblib>=1.3
+pydantic-settings>=2.2
+pytest>=8.0
+psutil>=5.9
