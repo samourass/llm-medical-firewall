@@ -1,0 +1,14 @@
+# Dépendances lourdes basées sur torch — installées séparément de requirements-ml.txt.
+# CUDA est détecté automatiquement par torch (torch.cuda.is_available()) : installez la roue
+# CPU par défaut ci-dessous, ou une roue CUDA si vous avez un GPU NVIDIA (voir
+# https://pytorch.org/get-started/locally/ pour la commande adaptée à votre CUDA toolkit).
+#
+# Nécessaire pour :
+#   - l'entraînement/l'inférence DistilBERT (training/distilbert.py, models/unified.py)
+#   - le backend RAG "sentence_transformers" (rag/embeddings.py) — sans ce paquet,
+#     EMBEDDING_PROVIDER=auto (défaut) se rabat automatiquement sur un embedder TF-IDF local.
+torch>=2.2
+transformers>=4.40
+datasets>=2.19
+accelerate>=0.30
+sentence-transformers>=3.0

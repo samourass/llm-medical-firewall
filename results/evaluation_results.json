@@ -1,0 +1,622 @@
+{
+  "input_firewall": {
+    "regex": {
+      "backend": "regex",
+      "status": "ok",
+      "n_samples": 600,
+      "n_benign": 100,
+      "n_attack": 500,
+      "accuracy": 0.28833333333333333,
+      "precision_macro": 0.7991702903983605,
+      "recall_macro": 0.2883333333333334,
+      "f1_macro": 0.22172863895957629,
+      "precision_weighted": 0.7991702903983605,
+      "recall_weighted": 0.28833333333333333,
+      "f1_weighted": 0.22172863895957629,
+      "false_positive_rate_pct": 0.0,
+      "false_negative_rate_pct": 78.8,
+      "attack_detection_rate_pct": 21.2,
+      "confusion_matrix": [
+        [
+          100,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          94,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          91,
+          0,
+          9,
+          0,
+          0,
+          0
+        ],
+        [
+          91,
+          0,
+          0,
+          9,
+          0,
+          0
+        ],
+        [
+          66,
+          0,
+          0,
+          0,
+          1,
+          33
+        ],
+        [
+          52,
+          0,
+          0,
+          0,
+          0,
+          48
+        ]
+      ],
+      "labels": [
+        "benign",
+        "jailbreak",
+        "pii_exfiltration",
+        "prompt_injection",
+        "rag_prompt_injection",
+        "secret_exfiltration"
+      ],
+      "per_class": {
+        "benign": {
+          "precision": 0.20242914979757085,
+          "recall": 1.0,
+          "f1": 0.3367003367003367,
+          "support": 100
+        },
+        "jailbreak": {
+          "precision": 1.0,
+          "recall": 0.06,
+          "f1": 0.11320754716981132,
+          "support": 100
+        },
+        "pii_exfiltration": {
+          "precision": 1.0,
+          "recall": 0.09,
+          "f1": 0.1651376146788991,
+          "support": 100
+        },
+        "prompt_injection": {
+          "precision": 1.0,
+          "recall": 0.09,
+          "f1": 0.1651376146788991,
+          "support": 100
+        },
+        "rag_prompt_injection": {
+          "precision": 1.0,
+          "recall": 0.01,
+          "f1": 0.019801980198019802,
+          "support": 100
+        },
+        "secret_exfiltration": {
+          "precision": 0.5925925925925926,
+          "recall": 0.48,
+          "f1": 0.5303867403314917,
+          "support": 100
+        }
+      },
+      "latency": {
+        "min_ms": 0.037807999998307196,
+        "max_ms": 0.19602900000137424,
+        "mean_ms": 0.08386836333329484,
+        "median_ms": 0.07561850000037396,
+        "p95_ms": 0.1362045499993414,
+        "n_requests": 600
+      }
+    },
+    "logistic_regression": {
+      "backend": "logistic_regression",
+      "status": "ok",
+      "n_samples": 600,
+      "n_benign": 100,
+      "n_attack": 500,
+      "accuracy": 0.99,
+      "precision_macro": 0.9904133270469905,
+      "recall_macro": 0.9899999999999999,
+      "f1_macro": 0.9899511327779842,
+      "precision_weighted": 0.9904133270469906,
+      "recall_weighted": 0.99,
+      "f1_weighted": 0.9899511327779842,
+      "false_positive_rate_pct": 0.0,
+      "false_negative_rate_pct": 1.0,
+      "attack_detection_rate_pct": 99.0,
+      "confusion_matrix": [
+        [
+          100,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          100,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          100,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          100,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          100,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          1,
+          94
+        ]
+      ],
+      "labels": [
+        "benign",
+        "jailbreak",
+        "pii_exfiltration",
+        "prompt_injection",
+        "rag_prompt_injection",
+        "secret_exfiltration"
+      ],
+      "per_class": {
+        "benign": {
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "f1": 0.975609756097561,
+          "support": 100
+        },
+        "jailbreak": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 100
+        },
+        "pii_exfiltration": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 100
+        },
+        "prompt_injection": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 100
+        },
+        "rag_prompt_injection": {
+          "precision": 0.9900990099009901,
+          "recall": 1.0,
+          "f1": 0.9950248756218906,
+          "support": 100
+        },
+        "secret_exfiltration": {
+          "precision": 1.0,
+          "recall": 0.94,
+          "f1": 0.9690721649484536,
+          "support": 100
+        }
+      },
+      "latency": {
+        "min_ms": 0.35093600000024594,
+        "max_ms": 0.8311230000010994,
+        "mean_ms": 0.4742087816667428,
+        "median_ms": 0.4578719999983605,
+        "p95_ms": 0.59916500000039,
+        "n_requests": 600
+      }
+    },
+    "xgboost": {
+      "backend": "xgboost",
+      "status": "ok",
+      "n_samples": 600,
+      "n_benign": 100,
+      "n_attack": 500,
+      "accuracy": 0.8,
+      "precision_macro": 0.8528616893264748,
+      "recall_macro": 0.7999999999999999,
+      "f1_macro": 0.7929361957837596,
+      "precision_weighted": 0.8528616893264748,
+      "recall_weighted": 0.8,
+      "f1_weighted": 0.7929361957837596,
+      "false_positive_rate_pct": 0.0,
+      "false_negative_rate_pct": 9.8,
+      "attack_detection_rate_pct": 90.2,
+      "confusion_matrix": [
+        [
+          100,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          10,
+          43,
+          0,
+          7,
+          0,
+          40
+        ],
+        [
+          19,
+          0,
+          80,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          94,
+          0,
+          6
+        ],
+        [
+          10,
+          0,
+          1,
+          16,
+          73,
+          0
+        ],
+        [
+          10,
+          0,
+          0,
+          0,
+          0,
+          90
+        ]
+      ],
+      "labels": [
+        "benign",
+        "jailbreak",
+        "pii_exfiltration",
+        "prompt_injection",
+        "rag_prompt_injection",
+        "secret_exfiltration"
+      ],
+      "per_class": {
+        "benign": {
+          "precision": 0.6711409395973155,
+          "recall": 1.0,
+          "f1": 0.8032128514056225,
+          "support": 100
+        },
+        "jailbreak": {
+          "precision": 1.0,
+          "recall": 0.43,
+          "f1": 0.6013986013986014,
+          "support": 100
+        },
+        "pii_exfiltration": {
+          "precision": 0.9876543209876543,
+          "recall": 0.8,
+          "f1": 0.8839779005524862,
+          "support": 100
+        },
+        "prompt_injection": {
+          "precision": 0.7966101694915254,
+          "recall": 0.94,
+          "f1": 0.8623853211009175,
+          "support": 100
+        },
+        "rag_prompt_injection": {
+          "precision": 1.0,
+          "recall": 0.73,
+          "f1": 0.8439306358381503,
+          "support": 100
+        },
+        "secret_exfiltration": {
+          "precision": 0.6617647058823529,
+          "recall": 0.9,
+          "f1": 0.7627118644067796,
+          "support": 100
+        }
+      },
+      "latency": {
+        "min_ms": 0.9325249999996288,
+        "max_ms": 1.760830000002045,
+        "mean_ms": 1.1189707683333396,
+        "median_ms": 1.0809359999992552,
+        "p95_ms": 1.4203855500021234,
+        "n_requests": 600
+      }
+    },
+    "distilbert": {
+      "backend": "distilbert",
+      "status": "skipped",
+      "reason": "FileNotFoundError: Mod\u00e8le DistilBERT introuvable dans /home/claude/llm-medical-firewall/llm-medical-firewall/models/distilbert. Entra\u00eenez-le d'abord avec :\n    python -m llmfw.training.distilbert"
+    }
+  },
+  "output_firewall": {
+    "n_cases": 20,
+    "n_leak_cases": 13,
+    "n_benign_cases": 7,
+    "true_positives": 13,
+    "false_negatives": 0,
+    "false_positives": 0,
+    "true_negatives": 7,
+    "detection_rate_pct": 100.0,
+    "false_positive_rate_pct": 0.0,
+    "false_negative_rate_pct": 0.0,
+    "latency": {
+      "min_ms": 0.018068000002813278,
+      "max_ms": 0.03877999999701842,
+      "mean_ms": 0.02603094999926725,
+      "median_ms": 0.025080999996873743,
+      "p95_ms": 0.03615514999921743,
+      "n_requests": 20
+    },
+    "by_category": [
+      {
+        "expected_category": "api_key",
+        "n": 4,
+        "n_detected": 4,
+        "detection_rate_pct": 100.0
+      },
+      {
+        "expected_category": "credential",
+        "n": 1,
+        "n_detected": 1,
+        "detection_rate_pct": 100.0
+      },
+      {
+        "expected_category": "email",
+        "n": 2,
+        "n_detected": 2,
+        "detection_rate_pct": 100.0
+      },
+      {
+        "expected_category": "phone_number",
+        "n": 2,
+        "n_detected": 2,
+        "detection_rate_pct": 100.0
+      },
+      {
+        "expected_category": "pii_ssn",
+        "n": 2,
+        "n_detected": 2,
+        "detection_rate_pct": 100.0
+      },
+      {
+        "expected_category": "system_prompt_leak",
+        "n": 2,
+        "n_detected": 2,
+        "detection_rate_pct": 100.0
+      }
+    ]
+  },
+  "robustness": {
+    "regex": {
+      "status": "ok",
+      "overall_accuracy": 0.45454545454545453,
+      "baseline_accuracy": 0.6666666666666666,
+      "by_variation": [
+        {
+          "variation": "benign_looking",
+          "n": 12,
+          "accuracy_pct": 58.33
+        },
+        {
+          "variation": "capitalization",
+          "n": 12,
+          "accuracy_pct": 66.67
+        },
+        {
+          "variation": "indirect_instruction",
+          "n": 12,
+          "accuracy_pct": 41.67
+        },
+        {
+          "variation": "multilingual_fr",
+          "n": 12,
+          "accuracy_pct": 16.67
+        },
+        {
+          "variation": "obfuscated_leetspeak",
+          "n": 12,
+          "accuracy_pct": 16.67
+        },
+        {
+          "variation": "obfuscated_manual",
+          "n": 12,
+          "accuracy_pct": 16.67
+        },
+        {
+          "variation": "original",
+          "n": 12,
+          "accuracy_pct": 66.67
+        },
+        {
+          "variation": "paraphrase",
+          "n": 12,
+          "accuracy_pct": 41.67
+        },
+        {
+          "variation": "punctuation",
+          "n": 12,
+          "accuracy_pct": 66.67
+        },
+        {
+          "variation": "role_play",
+          "n": 12,
+          "accuracy_pct": 50.0
+        },
+        {
+          "variation": "whitespace",
+          "n": 12,
+          "accuracy_pct": 58.33
+        }
+      ]
+    },
+    "logistic_regression": {
+      "status": "ok",
+      "overall_accuracy": 0.8636363636363636,
+      "baseline_accuracy": 1.0,
+      "by_variation": [
+        {
+          "variation": "benign_looking",
+          "n": 12,
+          "accuracy_pct": 91.67
+        },
+        {
+          "variation": "capitalization",
+          "n": 12,
+          "accuracy_pct": 100.0
+        },
+        {
+          "variation": "indirect_instruction",
+          "n": 12,
+          "accuracy_pct": 91.67
+        },
+        {
+          "variation": "multilingual_fr",
+          "n": 12,
+          "accuracy_pct": 66.67
+        },
+        {
+          "variation": "obfuscated_leetspeak",
+          "n": 12,
+          "accuracy_pct": 41.67
+        },
+        {
+          "variation": "obfuscated_manual",
+          "n": 12,
+          "accuracy_pct": 83.33
+        },
+        {
+          "variation": "original",
+          "n": 12,
+          "accuracy_pct": 100.0
+        },
+        {
+          "variation": "paraphrase",
+          "n": 12,
+          "accuracy_pct": 83.33
+        },
+        {
+          "variation": "punctuation",
+          "n": 12,
+          "accuracy_pct": 100.0
+        },
+        {
+          "variation": "role_play",
+          "n": 12,
+          "accuracy_pct": 91.67
+        },
+        {
+          "variation": "whitespace",
+          "n": 12,
+          "accuracy_pct": 100.0
+        }
+      ]
+    },
+    "xgboost": {
+      "status": "ok",
+      "overall_accuracy": 0.5378787878787878,
+      "baseline_accuracy": 0.6666666666666666,
+      "by_variation": [
+        {
+          "variation": "benign_looking",
+          "n": 12,
+          "accuracy_pct": 50.0
+        },
+        {
+          "variation": "capitalization",
+          "n": 12,
+          "accuracy_pct": 66.67
+        },
+        {
+          "variation": "indirect_instruction",
+          "n": 12,
+          "accuracy_pct": 50.0
+        },
+        {
+          "variation": "multilingual_fr",
+          "n": 12,
+          "accuracy_pct": 16.67
+        },
+        {
+          "variation": "obfuscated_leetspeak",
+          "n": 12,
+          "accuracy_pct": 16.67
+        },
+        {
+          "variation": "obfuscated_manual",
+          "n": 12,
+          "accuracy_pct": 41.67
+        },
+        {
+          "variation": "original",
+          "n": 12,
+          "accuracy_pct": 66.67
+        },
+        {
+          "variation": "paraphrase",
+          "n": 12,
+          "accuracy_pct": 83.33
+        },
+        {
+          "variation": "punctuation",
+          "n": 12,
+          "accuracy_pct": 66.67
+        },
+        {
+          "variation": "role_play",
+          "n": 12,
+          "accuracy_pct": 66.67
+        },
+        {
+          "variation": "whitespace",
+          "n": 12,
+          "accuracy_pct": 66.67
+        }
+      ]
+    },
+    "distilbert": {
+      "status": "skipped",
+      "reason": "FileNotFoundError: Mod\u00e8le DistilBERT introuvable dans /home/claude/llm-medical-firewall/llm-medical-firewall/models/distilbert. Entra\u00eenez-le d'abord avec :\n    python -m llmfw.training.distilbert"
+    }
+  }
+}

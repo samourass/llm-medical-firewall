@@ -1,0 +1,7 @@
+expected_category,n,n_detected,detection_rate_pct,overall_detection_rate_pct,overall_false_positive_rate_pct
+api_key,4,4,100.0,100.0,0.0
+credential,1,1,100.0,100.0,0.0
+email,2,2,100.0,100.0,0.0
+phone_number,2,2,100.0,100.0,0.0
+pii_ssn,2,2,100.0,100.0,0.0
+system_prompt_leak,2,2,100.0,100.0,0.0

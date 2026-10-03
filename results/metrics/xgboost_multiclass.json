@@ -1,0 +1,342 @@
+{
+  "model": "xgboost",
+  "display_name": "XGBoost (multiclass)",
+  "family": "classical_ml_multiclass",
+  "dataset_version": "v1",
+  "seed": 42,
+  "labels": [
+    "benign",
+    "jailbreak",
+    "pii_exfiltration",
+    "prompt_injection",
+    "rag_prompt_injection",
+    "secret_exfiltration"
+  ],
+  "best_params": {
+    "n_estimators": 400,
+    "max_depth": 4
+  },
+  "hyperparameter_search": [
+    {
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 4
+      },
+      "fit_time_s": 21.76579737999998,
+      "val_f1_macro": 0.7905877537492132,
+      "val_accuracy": 0.7988394584139265
+    },
+    {
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 6
+      },
+      "fit_time_s": 30.21572270300001,
+      "val_f1_macro": 0.7683302941339929,
+      "val_accuracy": 0.7736943907156673
+    },
+    {
+      "params": {
+        "n_estimators": 400,
+        "max_depth": 4
+      },
+      "fit_time_s": 31.621888249999984,
+      "val_f1_macro": 0.791635617914149,
+      "val_accuracy": 0.8056092843326886
+    },
+    {
+      "params": {
+        "n_estimators": 400,
+        "max_depth": 6
+      },
+      "fit_time_s": 41.559762638999985,
+      "val_f1_macro": 0.7736506797247964,
+      "val_accuracy": 0.7833655705996132
+    }
+  ],
+  "train_time_s_best_config": 31.621888249999984,
+  "search_time_s_total": 125.57169709599998,
+  "split_sizes": {
+    "train": 4481,
+    "validation": 1034,
+    "test": 1051
+  },
+  "validation_metrics": {
+    "n_samples": 1034,
+    "accuracy": 0.8056092843326886,
+    "f1_macro": 0.791635617914149,
+    "f1_weighted": 0.803622427887802,
+    "precision_macro": 0.8448528059482753,
+    "recall_macro": 0.7828414599372683,
+    "log_loss": 0.496306488006214,
+    "confusion_matrix": [
+      [
+        302,
+        0,
+        19,
+        0,
+        0,
+        13
+      ],
+      [
+        7,
+        85,
+        0,
+        8,
+        0,
+        40
+      ],
+      [
+        42,
+        0,
+        94,
+        0,
+        0,
+        4
+      ],
+      [
+        5,
+        0,
+        0,
+        118,
+        0,
+        17
+      ],
+      [
+        16,
+        0,
+        0,
+        23,
+        94,
+        7
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        140
+      ]
+    ],
+    "labels": [
+      "benign",
+      "jailbreak",
+      "pii_exfiltration",
+      "prompt_injection",
+      "rag_prompt_injection",
+      "secret_exfiltration"
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.8118279569892473,
+        "recall": 0.9041916167664671,
+        "f1": 0.8555240793201133,
+        "support": 334,
+        "tp": 302,
+        "tn": 630,
+        "fp": 70,
+        "fn": 32
+      },
+      "jailbreak": {
+        "precision": 1.0,
+        "recall": 0.6071428571428571,
+        "f1": 0.7555555555555555,
+        "support": 140,
+        "tp": 85,
+        "tn": 894,
+        "fp": 0,
+        "fn": 55
+      },
+      "pii_exfiltration": {
+        "precision": 0.831858407079646,
+        "recall": 0.6714285714285714,
+        "f1": 0.7430830039525692,
+        "support": 140,
+        "tp": 94,
+        "tn": 875,
+        "fp": 19,
+        "fn": 46
+      },
+      "prompt_injection": {
+        "precision": 0.7919463087248322,
+        "recall": 0.8428571428571429,
+        "f1": 0.8166089965397924,
+        "support": 140,
+        "tp": 118,
+        "tn": 863,
+        "fp": 31,
+        "fn": 22
+      },
+      "rag_prompt_injection": {
+        "precision": 1.0,
+        "recall": 0.6714285714285714,
+        "f1": 0.8034188034188035,
+        "support": 140,
+        "tp": 94,
+        "tn": 894,
+        "fp": 0,
+        "fn": 46
+      },
+      "secret_exfiltration": {
+        "precision": 0.6334841628959276,
+        "recall": 1.0,
+        "f1": 0.775623268698061,
+        "support": 140,
+        "tp": 140,
+        "tn": 813,
+        "fp": 81,
+        "fn": 0
+      }
+    }
+  },
+  "test_metrics": {
+    "n_samples": 1051,
+    "accuracy": 0.840152235965747,
+    "f1_macro": 0.8032709359057093,
+    "f1_weighted": 0.8310137568181328,
+    "precision_macro": 0.8753584629668558,
+    "recall_macro": 0.8036439783669701,
+    "log_loss": 0.4207384041354501,
+    "confusion_matrix": [
+      [
+        356,
+        0,
+        0,
+        0,
+        0,
+        5
+      ],
+      [
+        10,
+        57,
+        0,
+        14,
+        0,
+        59
+      ],
+      [
+        12,
+        0,
+        128,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        121,
+        0,
+        19
+      ],
+      [
+        24,
+        0,
+        0,
+        25,
+        91,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        130
+      ]
+    ],
+    "labels": [
+      "benign",
+      "jailbreak",
+      "pii_exfiltration",
+      "prompt_injection",
+      "rag_prompt_injection",
+      "secret_exfiltration"
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.8855721393034826,
+        "recall": 0.9861495844875346,
+        "f1": 0.9331585845347313,
+        "support": 361,
+        "tp": 356,
+        "tn": 644,
+        "fp": 46,
+        "fn": 5
+      },
+      "jailbreak": {
+        "precision": 1.0,
+        "recall": 0.40714285714285714,
+        "f1": 0.5786802030456852,
+        "support": 140,
+        "tp": 57,
+        "tn": 911,
+        "fp": 0,
+        "fn": 83
+      },
+      "pii_exfiltration": {
+        "precision": 1.0,
+        "recall": 0.9142857142857143,
+        "f1": 0.9552238805970149,
+        "support": 140,
+        "tp": 128,
+        "tn": 911,
+        "fp": 0,
+        "fn": 12
+      },
+      "prompt_injection": {
+        "precision": 0.75625,
+        "recall": 0.8642857142857143,
+        "f1": 0.8066666666666666,
+        "support": 140,
+        "tp": 121,
+        "tn": 872,
+        "fp": 39,
+        "fn": 19
+      },
+      "rag_prompt_injection": {
+        "precision": 1.0,
+        "recall": 0.65,
+        "f1": 0.7878787878787878,
+        "support": 140,
+        "tp": 91,
+        "tn": 911,
+        "fp": 0,
+        "fn": 49
+      },
+      "secret_exfiltration": {
+        "precision": 0.6103286384976526,
+        "recall": 1.0,
+        "f1": 0.7580174927113703,
+        "support": 130,
+        "tp": 130,
+        "tn": 838,
+        "fp": 83,
+        "fn": 0
+      }
+    }
+  },
+  "latency": {
+    "latency_single_ms_mean": 1.1598370400017188,
+    "latency_single_ms_median": 1.1409279999838873,
+    "latency_single_ms_p95": 1.3568370999792019,
+    "latency_batch_ms_per_sample": 0.04923835299718991,
+    "latency_n_single": 200
+  },
+  "resources": {
+    "model_size_mb": 2.320225715637207,
+    "process_rss_mb_after_inference": 257.34765625
+  },
+  "environment": {
+    "python": "3.12.3",
+    "sklearn": "1.8.0",
+    "xgboost": "3.4.1",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+    "cpu_count": 1
+  }
+}

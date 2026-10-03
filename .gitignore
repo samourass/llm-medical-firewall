@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+mlruns/
+models/*
+!models/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+.pytest_cache/

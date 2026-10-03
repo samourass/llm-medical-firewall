@@ -1,0 +1,5 @@
+model,status,n_benign,n_attack,attack_detection_rate_pct,false_positive_rate_pct,false_negative_rate_pct
+regex,ok,100.0,500.0,21.2,0.0,78.8
+logistic_regression,ok,100.0,500.0,99.0,0.0,1.0
+xgboost,ok,100.0,500.0,90.2,0.0,9.8
+distilbert,skipped,,,,,

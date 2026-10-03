@@ -1,0 +1,6 @@
+model,status,n_samples,accuracy,precision_macro,recall_macro,f1_macro,precision_weighted,recall_weighted,f1_weighted,false_positive_rate_pct,false_negative_rate_pct,attack_detection_rate_pct,latency_median_ms,latency_p95_ms,reason
+regex,ok,600.0,0.28833333333333333,0.7991702903983605,0.2883333333333334,0.22172863895957629,0.7991702903983605,0.28833333333333333,0.22172863895957629,0.0,78.8,21.2,0.07561850000037396,0.1362045499993414,
+logistic_regression,ok,600.0,0.99,0.9904133270469905,0.9899999999999999,0.9899511327779842,0.9904133270469906,0.99,0.9899511327779842,0.0,1.0,99.0,0.4578719999983605,0.59916500000039,
+xgboost,ok,600.0,0.8,0.8528616893264748,0.7999999999999999,0.7929361957837596,0.8528616893264748,0.8,0.7929361957837596,0.0,9.8,90.2,1.0809359999992552,1.4203855500021234,
+distilbert,skipped,,,,,,,,,,,,,,"FileNotFoundError: Modèle DistilBERT introuvable dans /home/claude/llm-medical-firewall/llm-medical-firewall/models/distilbert. Entraînez-le d'abord avec :
+    python -m llmfw.training.distilbert"

@@ -1,0 +1,329 @@
+{
+  "model": "logistic_regression",
+  "display_name": "Logistic Regression (multiclass)",
+  "family": "classical_ml_multiclass",
+  "dataset_version": "v1",
+  "seed": 42,
+  "labels": [
+    "benign",
+    "jailbreak",
+    "pii_exfiltration",
+    "prompt_injection",
+    "rag_prompt_injection",
+    "secret_exfiltration"
+  ],
+  "best_params": {
+    "C": 10.0
+  },
+  "hyperparameter_search": [
+    {
+      "params": {
+        "C": 0.1
+      },
+      "fit_time_s": 0.1890230850000023,
+      "val_f1_macro": 0.9754896951602504,
+      "val_accuracy": 0.9748549323017408
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "fit_time_s": 0.2004610609999986,
+      "val_f1_macro": 0.9830304051471042,
+      "val_accuracy": 0.9835589941972921
+    },
+    {
+      "params": {
+        "C": 10.0
+      },
+      "fit_time_s": 0.19785764600001698,
+      "val_f1_macro": 0.9862950076992872,
+      "val_accuracy": 0.9864603481624759
+    }
+  ],
+  "train_time_s_best_config": 0.19785764600001698,
+  "search_time_s_total": 0.8085386340000014,
+  "split_sizes": {
+    "train": 4481,
+    "validation": 1034,
+    "test": 1051
+  },
+  "validation_metrics": {
+    "n_samples": 1034,
+    "accuracy": 0.9864603481624759,
+    "f1_macro": 0.9862950076992872,
+    "f1_weighted": 0.9863721289715845,
+    "precision_macro": 0.9898796957206528,
+    "recall_macro": 0.9833333333333334,
+    "log_loss": 0.1460325389632006,
+    "confusion_matrix": [
+      [
+        334,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        140,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        9,
+        0,
+        131,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        135,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        140,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        140
+      ]
+    ],
+    "labels": [
+      "benign",
+      "jailbreak",
+      "pii_exfiltration",
+      "prompt_injection",
+      "rag_prompt_injection",
+      "secret_exfiltration"
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.9737609329446064,
+        "recall": 1.0,
+        "f1": 0.9867060561299852,
+        "support": 334,
+        "tp": 334,
+        "tn": 691,
+        "fp": 9,
+        "fn": 0
+      },
+      "jailbreak": {
+        "precision": 0.9655172413793104,
+        "recall": 1.0,
+        "f1": 0.9824561403508771,
+        "support": 140,
+        "tp": 140,
+        "tn": 889,
+        "fp": 5,
+        "fn": 0
+      },
+      "pii_exfiltration": {
+        "precision": 1.0,
+        "recall": 0.9357142857142857,
+        "f1": 0.966789667896679,
+        "support": 140,
+        "tp": 131,
+        "tn": 894,
+        "fp": 0,
+        "fn": 9
+      },
+      "prompt_injection": {
+        "precision": 1.0,
+        "recall": 0.9642857142857143,
+        "f1": 0.9818181818181818,
+        "support": 140,
+        "tp": 135,
+        "tn": 894,
+        "fp": 0,
+        "fn": 5
+      },
+      "rag_prompt_injection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 140,
+        "tp": 140,
+        "tn": 894,
+        "fp": 0,
+        "fn": 0
+      },
+      "secret_exfiltration": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 140,
+        "tp": 140,
+        "tn": 894,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "test_metrics": {
+    "n_samples": 1051,
+    "accuracy": 0.9381541389153187,
+    "f1_macro": 0.9201534091995623,
+    "f1_weighted": 0.9296329509106267,
+    "precision_macro": 0.9542697085800534,
+    "recall_macro": 0.9166666666666666,
+    "log_loss": 0.23942757739645382,
+    "confusion_matrix": [
+      [
+        361,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        140,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        140,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        140,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        140,
+        0
+      ],
+      [
+        35,
+        0,
+        0,
+        25,
+        5,
+        65
+      ]
+    ],
+    "labels": [
+      "benign",
+      "jailbreak",
+      "pii_exfiltration",
+      "prompt_injection",
+      "rag_prompt_injection",
+      "secret_exfiltration"
+    ],
+    "per_class": {
+      "benign": {
+        "precision": 0.9116161616161617,
+        "recall": 1.0,
+        "f1": 0.9537648612945839,
+        "support": 361,
+        "tp": 361,
+        "tn": 655,
+        "fp": 35,
+        "fn": 0
+      },
+      "jailbreak": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 140,
+        "tp": 140,
+        "tn": 911,
+        "fp": 0,
+        "fn": 0
+      },
+      "pii_exfiltration": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 140,
+        "tp": 140,
+        "tn": 911,
+        "fp": 0,
+        "fn": 0
+      },
+      "prompt_injection": {
+        "precision": 0.8484848484848485,
+        "recall": 1.0,
+        "f1": 0.9180327868852459,
+        "support": 140,
+        "tp": 140,
+        "tn": 886,
+        "fp": 25,
+        "fn": 0
+      },
+      "rag_prompt_injection": {
+        "precision": 0.9655172413793104,
+        "recall": 1.0,
+        "f1": 0.9824561403508771,
+        "support": 140,
+        "tp": 140,
+        "tn": 906,
+        "fp": 5,
+        "fn": 0
+      },
+      "secret_exfiltration": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 130,
+        "tp": 65,
+        "tn": 921,
+        "fp": 0,
+        "fn": 65
+      }
+    }
+  },
+  "latency": {
+    "latency_single_ms_mean": 0.45519661500080133,
+    "latency_single_ms_median": 0.42087850000882554,
+    "latency_single_ms_p95": 0.6594627999959349,
+    "latency_batch_ms_per_sample": 0.018127629876304285,
+    "latency_n_single": 200
+  },
+  "resources": {
+    "model_size_mb": 0.2714252471923828,
+    "process_rss_mb_after_inference": 205.60546875
+  },
+  "environment": {
+    "python": "3.12.3",
+    "sklearn": "1.8.0",
+    "xgboost": "3.4.1",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "platform": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39",
+    "cpu_count": 1
+  }
+}

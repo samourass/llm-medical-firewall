@@ -1,0 +1,153 @@
+{
+  "model": "xgboost",
+  "display_name": "XGBoost",
+  "family": "classical_ml",
+  "dataset_version": "v1",
+  "seed": 42,
+  "threshold": 0.5,
+  "best_params": {
+    "n_estimators": 200,
+    "max_depth": 4
+  },
+  "hyperparameter_search": [
+    {
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 4
+      },
+      "fit_time_s": 3.0282038090000185,
+      "val_f1": 0.9216255442670537,
+      "val_roc_auc": 0.9294952951240376,
+      "val_fpr": 0.12874251497005987,
+      "val_fnr": 0.09285714285714286
+    },
+    {
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 6
+      },
+      "fit_time_s": 4.32471258999999,
+      "val_f1": 0.908957415565345,
+      "val_roc_auc": 0.9293798118049614,
+      "val_fpr": 0.12874251497005987,
+      "val_fnr": 0.11571428571428571
+    },
+    {
+      "params": {
+        "n_estimators": 400,
+        "max_depth": 4
+      },
+      "fit_time_s": 4.775662382000007,
+      "val_f1": 0.914536157779401,
+      "val_roc_auc": 0.9342044482463644,
+      "val_fpr": 0.12874251497005987,
+      "val_fnr": 0.10571428571428572
+    },
+    {
+      "params": {
+        "n_estimators": 400,
+        "max_depth": 6
+      },
+      "fit_time_s": 6.932789384000017,
+      "val_f1": 0.9025110782865583,
+      "val_roc_auc": 0.929409751924722,
+      "val_fpr": 0.12874251497005987,
+      "val_fnr": 0.12714285714285714
+    }
+  ],
+  "train_time_s_best_config": 3.0282038090000185,
+  "search_time_s_total": 19.187537983999988,
+  "split_sizes": {
+    "train": 4481,
+    "validation": 1034,
+    "test": 1051
+  },
+  "validation_metrics": {
+    "n_samples": 1034,
+    "accuracy": 0.8955512572533849,
+    "precision": 0.9365781710914455,
+    "recall": 0.9071428571428571,
+    "f1": 0.9216255442670537,
+    "roc_auc": 0.9294952951240376,
+    "pr_auc": 0.9678585591771545,
+    "tp": 635,
+    "tn": 291,
+    "fp": 43,
+    "fn": 65,
+    "fpr": 0.12874251497005987,
+    "fnr": 0.09285714285714286
+  },
+  "test_metrics": {
+    "n_samples": 1051,
+    "accuracy": 0.917221693625119,
+    "precision": 0.9824,
+    "recall": 0.8898550724637682,
+    "f1": 0.9338403041825095,
+    "roc_auc": 0.9935485166004255,
+    "pr_auc": 0.9961786727660561,
+    "tp": 614,
+    "tn": 350,
+    "fp": 11,
+    "fn": 76,
+    "fpr": 0.030470914127423823,
+    "fnr": 0.11014492753623188
+  },
+  "test_breakdown": {
+    "attack_detection_rate": {
+      "jailbreak": {
+        "n": 140,
+        "rate": 0.95
+      },
+      "pii_exfiltration": {
+        "n": 140,
+        "rate": 0.6142857142857143
+      },
+      "prompt_injection": {
+        "n": 140,
+        "rate": 1.0
+      },
+      "rag_prompt_injection": {
+        "n": 140,
+        "rate": 0.9428571428571428
+      },
+      "secret_exfiltration": {
+        "n": 130,
+        "rate": 0.9461538461538461
+      }
+    },
+    "benign_false_positive_rate": {
+      "benign_doc": {
+        "n": 22,
+        "rate": 0.18181818181818182
+      },
+      "benign_hard": {
+        "n": 120,
+        "rate": 0.0
+      },
+      "benign_user": {
+        "n": 219,
+        "rate": 0.0319634703196347
+      }
+    }
+  },
+  "latency": {
+    "latency_single_ms_mean": 0.6059872699995594,
+    "latency_single_ms_median": 0.6048269999894273,
+    "latency_single_ms_p95": 0.6746448999976451,
+    "latency_batch_ms_per_sample": 0.017751724072301047,
+    "latency_n_single": 200
+  },
+  "resources": {
+    "model_size_mb": 0.3099803924560547,
+    "process_rss_mb_after_inference": 255.9765625
+  },
+  "environment": {
+    "python": "3.12.3",
+    "sklearn": "1.8.0",
+    "xgboost": "3.4.1",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "platform": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+    "cpu_count": 1
+  }
+}

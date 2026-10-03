@@ -1,0 +1,16 @@
+[project]
+name = "llm-medical-firewall"
+version = "0.1.0"
+description = "LLM Firewall pour un chatbot médical (RAG) : comparaison de détecteurs de prompt injection / jailbreak"
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

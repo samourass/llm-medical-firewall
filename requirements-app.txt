@@ -1,0 +1,3 @@
+# Interface Streamlit (app.py + pages/). Séparé de requirements-ml.txt car uniquement requis
+# pour lancer le dashboard, pas pour l'entraînement/l'évaluation en ligne de commande.
+streamlit>=1.38

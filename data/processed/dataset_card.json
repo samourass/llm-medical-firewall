@@ -1,0 +1,93 @@
+{
+  "dataset_version": "v1",
+  "seed": 42,
+  "language": "en",
+  "source": "synthetic (templates in src/llmfw/data/templates.py) - no public dataset used yet",
+  "generated_rows_before_filter": 6604,
+  "final_rows": 6566,
+  "split_method": "stratified by subtype, disjoint by template_id (70/15/15 target)",
+  "split_sizes": {
+    "train": 4481,
+    "validation": 1034,
+    "test": 1051
+  },
+  "split_ratios_actual": {
+    "train": 0.6825,
+    "validation": 0.1575,
+    "test": 0.1601
+  },
+  "binary_label": "0 = benign, 1 = attack (any of the 5 attack categories)",
+  "category_counts": {
+    "benign": 2401,
+    "prompt_injection": 840,
+    "jailbreak": 840,
+    "pii_exfiltration": 840,
+    "rag_prompt_injection": 840,
+    "secret_exfiltration": 805
+  },
+  "category_counts_per_split": {
+    "train": {
+      "benign": 1706,
+      "jailbreak": 560,
+      "prompt_injection": 560,
+      "rag_prompt_injection": 560,
+      "pii_exfiltration": 560,
+      "secret_exfiltration": 535
+    },
+    "validation": {
+      "benign": 334,
+      "prompt_injection": 140,
+      "rag_prompt_injection": 140,
+      "jailbreak": 140,
+      "pii_exfiltration": 140,
+      "secret_exfiltration": 140
+    },
+    "test": {
+      "benign": 361,
+      "pii_exfiltration": 140,
+      "jailbreak": 140,
+      "rag_prompt_injection": 140,
+      "prompt_injection": 140,
+      "secret_exfiltration": 130
+    }
+  },
+  "attack_ratio_per_split": {
+    "train": 0.6193,
+    "validation": 0.677,
+    "test": 0.6565
+  },
+  "near_duplicate_filter": {
+    "threshold": 0.9,
+    "removed": {
+      "validation": 28,
+      "test": 10
+    },
+    "max_similarity": {
+      "validation": {
+        "mean": 0.5252,
+        "p95": 0.8491,
+        "max_before_filter": 0.9882,
+        "max_after_filter": 0.8991
+      },
+      "test": {
+        "mean": 0.5223,
+        "p95": 0.8305,
+        "max_before_filter": 0.942,
+        "max_after_filter": 0.8966
+      }
+    }
+  },
+  "leakage_audit": {
+    "exact_duplicates_train_test": 0,
+    "exact_duplicates_train_validation": 0,
+    "exact_duplicates_validation_test": 0,
+    "shared_templates_train_test": 0,
+    "shared_templates_train_validation": 0,
+    "shared_templates_validation_test": 0
+  },
+  "limitations": [
+    "Synthetic template data: scores will be optimistic compared with real-world attacks.",
+    "Splits are disjoint by template, so test measures generalisation to unseen templates, but slot vocabulary (drugs, conditions, canary strings) is shared across splits.",
+    "English only."
+  ]
+}
